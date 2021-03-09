@@ -5,7 +5,7 @@ import './Country.css'
 const Country = (props) => {
 
 
-    const {name,capital,flag} = props.country;
+    const { name, flag } = props.country;
     const history = useHistory();
 
     const handleShowDetails = (name) => {
@@ -13,12 +13,12 @@ const Country = (props) => {
     }
 
     return (
-        <div className="country" style={{backgroundImage:`url(${flag})`}}>
+        <div className="country" style={{ backgroundImage: `url(${flag})` }}>
             <h2>{name}</h2>
             <p>
                 <Link to={`/country/${name}`}>Show Details</Link>
             </p><br></br>
-            <button onClick={() => handleShowDetails(name) }> Show Details</button>
+            <button onClick={() => handleShowDetails(name)}> Show Details</button>
         </div>
     );
 };
